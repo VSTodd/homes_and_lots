@@ -1,0 +1,345 @@
+.App {
+  justify-content: left;
+  margin-left: 10px;
+  display: flex;
+}
+
+.button {
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 6px;
+  margin-left: 25px;
+  padding: 15px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cardContainer {
+  text-align: left;
+  border: 2px solid #000;
+  border-radius: 10px;
+  width: 350px;
+  height: 575px;
+  margin: 25px;
+}
+
+.tags {
+  border: 1px solid #606060;
+  border-radius: 20px;
+  margin-right: 10px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.noTags {
+  height: 60px;
+}
+
+.homeInfoContainer {
+  padding: 25px;
+}
+
+.cardImageContainer {
+  position: relative;
+}
+
+.cardImageContainer img {
+  border-bottom: 2px solid #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 200px;
+}
+
+#homeDetails, .tagsContainer, #cityState, #acreage {
+  color: #606060;
+}
+
+.lotsList .cardContainer {
+  height: 500px;
+}
+
+.lotInfoContainer {
+  padding: 0 25px;
+}
+
+.favoriteButton {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+
+.favoriteButton:hover {
+  background-color: red;
+}
+
+.favoriteButton.highlighted:hover {
+  background-color: #fff;
+}
+
+.favoriteButton img {
+  border-width: 0 0 medium;
+  border-bottom-style: none;
+  border-bottom-color: currentColor;
+  outline: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 0 !important;
+  text-decoration: none !important;
+}
+
+.favoriteButton.highlighted {
+  background-color: red;
+}
+
+.homesListContainer {
+  margin: 25px;
+}
+
+.homesList {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 15px;
+  display: inline-flex;
+}
+
+.lotsContainer {
+  margin: 25px;
+}
+
+.lotsList {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 15px;
+  display: inline-flex;
+}
+
+.selectedCardContainer {
+  flex-direction: row;
+  display: flex;
+}
+
+#modal-container {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+}
+
+#modal-container:empty {
+  display: none;
+}
+
+.screen, .image-screen {
+  z-index: 2;
+  background-color: #0009;
+  padding: 0 10px;
+  position: fixed;
+  inset: 0;
+  overflow: auto;
+}
+
+.image-screen {
+  z-index: 5;
+}
+
+.image-screen img {
+  border-radius: 3px;
+  margin-top: 18px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.image-screen footer {
+  text-align: center;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.image-screen footer div {
+  color: #fff;
+  padding-bottom: 9px;
+  line-height: 28px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image-screen footer div h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.image-screen footer div p {
+  font-size: 14px;
+}
+
+.image-screen footer div .horiz-list li {
+  color: #fff;
+  font-size: 14px;
+}
+
+.image-screen footer div .horiz-list li:before {
+  color: #fff;
+}
+
+.image-screen header > i, .image-screen footer > i {
+  color: #999;
+  position: absolute;
+}
+
+.image-screen header > i:before, .image-screen footer > i:before {
+  font-size: 20px;
+}
+
+.image-screen header .x-icon {
+  text-align: center;
+  width: 28px;
+  right: 0;
+}
+
+.image-screen header .x-icon, .image-screen .back-icon, .image-screen .forward-icon {
+  cursor: pointer;
+  line-height: 32px;
+}
+
+.image-screen header .x-icon:hover, .image-screen .back-icon:hover, .image-screen .forward-icon:hover {
+  color: #fff;
+  font-size: 24px;
+  transition: all 80ms;
+}
+
+.image-screen header .x-icon:hover:before, .image-screen .back-icon:hover:before, .image-screen .forward-icon:hover:before {
+  font-size: 24px;
+  transition: all 80ms;
+}
+
+.image-screen .back-icon, .image-screen .forward-icon {
+  width: 60px;
+  line-height: 150px;
+}
+
+.image-screen .back-icon {
+  float: left;
+  text-align: right;
+  bottom: 0;
+  left: 0;
+}
+
+.image-screen .forward-icon {
+  float: right;
+  text-align: left;
+  bottom: 0;
+  right: 0;
+}
+
+.active {
+  background-color: #d3d3d3;
+}
+
+#modal {
+  box-sizing: border-box;
+  z-index: 3;
+  background-color: #edeff0;
+  border-radius: 3px;
+  width: 60%;
+  margin: 48px 0 78px 50%;
+  padding: 30px 30px 35px;
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+#modal:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.modalImageContainer {
+  width: 50%;
+}
+
+.modalImageContainer img {
+  width: 100%;
+}
+
+.modalInformationContainer {
+  width: 50%;
+  padding-left: 20px;
+  position: relative;
+}
+
+.modalInformationContainer .favoriteButton {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 1%;
+  right: 1px;
+}
+
+.modalInformationContainer .favoriteButton:hover {
+  background-color: red;
+}
+
+.compatibleOptionsContainer {
+  flex-direction: column;
+  display: flex;
+}
+
+.compatibleOptionsList {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px;
+  padding: 10px;
+  display: inline-flex;
+}
+
+#compatibleOptionsTitle p {
+  text-align: center;
+  color: #606060;
+  padding: 0;
+  font-size: 32px;
+}
+
+.sidenav {
+  border-right: 1px solid #000;
+  width: 250px;
+  max-width: 250px;
+}
+
+.sidenav ul {
+  text-align: left;
+  margin-left: 0;
+  list-style-type: none;
+}
+
+.modalInformationContainer .favoriteButton.highlighted {
+  background-color: red;
+}
+
+/*# sourceMappingURL=index.7489b2fd.css.map */
